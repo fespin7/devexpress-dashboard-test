@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.DevExpress().Dashboard(settings =>
+{
+    settings.Name = "Dashboard";
+    settings.ControllerName = "Tablero";
+
+    //Establecer si se debe o no cargar un dashboard por defecto
+    //settings.LoadDefaultDashboard = false;
+
+    // Specifies a working mode of the extension as 'Designer'.
+    settings.WorkingMode = DevExpress.DashboardWeb.WorkingMode.Designer;
+
+    // Specifies an identifier of the default dashboard loaded to the Web Dashboard.
+    //settings.InitialDashboardId = "dashboard1";
+
+    //Eventos
+    //settings.ClientSideEvents.BeforeRender = "onBeforeRender";
+
+    //settings.ClientSideEvents.DashboardChanged = "onDashboardChanged";
+    //settings.ClientSideEvents.DashboardTitleToolbarUpdated = "onDashboardTitleToolbarUpdated";
+
+    //settings.AllowExportDashboardItems = true;
+    //settings.IncludeDashboardIdToUrl = true;
+    //settings.IncludeDashboardStateToUrl = true;
+
+}).GetHtml()
